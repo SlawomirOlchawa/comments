@@ -59,10 +59,10 @@ abstract class Model_Abstract_Commentbox extends Model_Abstract_Record
      */
     public function delete()
     {
-        foreach ($this->comments->findAll() as $photo)
+        foreach ($this->comments->findAll() as $comment)
         {
-            /** @var Model_Comment $photo */
-            $photo->delete();
+            /** @var Model_Comment $comment */
+            $comment->delete();
         }
 
         return parent::delete();
